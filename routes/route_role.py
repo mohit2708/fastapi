@@ -11,7 +11,7 @@ from database.connection import get_db
 
 # from database.repository.role import get_roles
 
-from database.schemas.role import RoleList, RoleCreate, RoleUpdate
+from database.schemas.role import RoleList, RoleDetail, RoleCreate, RoleUpdate, RoleDelete
 
 from typing import List
 
@@ -45,6 +45,79 @@ def get_roles(db: Session) -> List[dict]:
         }
         roles_list.append(role_dict)
     return roles_list
+
+'''
+Get role List by id
+'''
+@router.get("/role/{role_id}", response_model=RoleDetail)
+def get_role_by_id(role_id: int, db: Session = Depends(get_db)):
+    role = db.query(Role).filter(Role.id == role_id).first()
+    # if not role:
+    if role is None:
+        # raise HTTPException(status_code=404, detail="Role not found")
+        return ORJSONResponse(
+            content={
+                "status": False,
+                "code": 400,
+                "message": f"Role id {role_id} does not exists!!"
+            },
+            status_code=400
+        )
+    
+    role_dict = {
+        "id": role.id,
+        "slug": role.slug,
+        "name": role.name
+    }
+    return role_dict
+
+    role = get_role(db, role_id)
+    if role is None:
+        raise HTTPException(status_code=404, detail="Role not found")
+    
+    role_data = {
+        "success": True,
+        "code": 200,
+        "message": "Role retrieved successfully",
+        "role": role
+    }
+    
+    response_data = RoleDetail(**role_data)
+    return ORJSONResponse(content=response_data.dict(), status_code=200)
+
+
+# @router.get("/role/{role_id}", response_model=RoleDetail)
+# def get_role_by_id(role_id: int, db: Session = Depends(get_db)):
+#     role = get_role(db, role_id)
+#     if role is None:
+#         raise HTTPException(status_code=404, detail="Role not found")
+    
+#     role_data = {
+#         "success": True,
+#         "code": 200,
+#         "message": "Role retrieved successfully",
+#         "role": role
+#     }
+    
+#     response_data = RoleDetail(**role_data)
+#     return ORJSONResponse(content=response_data.dict(), status_code=200)
+
+# def get_role(db: Session, role_id: int) -> Optional[dict]:
+#     role = db.query(Role).filter(Role.id == role_id).first()
+#     if role is None:
+#         return None
+    
+#     role_dict = {
+#         "id": role.id,
+#         "slug": role.slug,
+#         "name": role.name
+#     }
+#     return role_dict
+
+# @router.get("/role-list/{id}", response_model=List[RoleList])
+# def get_roles_list_by_id(id: id, db: Session = Depends(get_db)):
+#     return "hello"
+
 
 
 '''

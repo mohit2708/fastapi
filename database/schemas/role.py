@@ -62,7 +62,16 @@ class RoleList(BaseModel):
     
 
     class Config:
-        orm_mode = True
+        # orm_mode = True
+        from_attributes = True
+
+class RoleDetail(BaseModel):
+    id: int
+    slug: str
+    name: str
+
+    class Config:
+        from_attributes = True
 
 
 class RoleUpdate(BaseModel):
@@ -70,13 +79,15 @@ class RoleUpdate(BaseModel):
     name: str = Field(..., min_length=1, max_length=255, description="The name of the role")
 
     class Config:
-        orm_mode = True
+        # orm_mode = True
+        from_attributes = True
 
 
-# class RoleDelete(BaseModel):
-#     id: int
-#     slug: str
-#     name: str
+class RoleDelete(BaseModel):
+    id: int
+    slug: str
+    name: str
 
-#     class Config:
-#         orm_mode = True
+    class Config:
+        # orm_mode = True
+        from_attributes = True

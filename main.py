@@ -16,6 +16,8 @@ from database.models.role import Role
 from database.seeders.seed_roles import seed_roles
 from typing import Generator
 
+from sqlalchemy.exc import SQLAlchemyError
+
 
 
 # from database import config
@@ -47,13 +49,17 @@ def start_application():
 
 app = start_application()
 
-
-
 # Add Role seeder
 @app.on_event("startup")
 def add_seed_roles():
-    db = SessionLocal()
-    seed_roles(db)
+    try:
+        db = SessionLocal()
+        seed_roles(db)
+    except SQLAlchemyError as e:
+        print(f"Error occurred during database seeding: {e}")
+        # Optionally, handle the error gracefully, log it, or raise a custom exception.
+    finally:
+        db.close()
 # End Role seeder
 
 
