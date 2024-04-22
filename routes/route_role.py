@@ -63,27 +63,19 @@ def get_role_by_id(role_id: int, db: Session = Depends(get_db)):
             },
             status_code=400
         )
-    
-    role_dict = {
-        "id": role.id,
-        "slug": role.slug,
-        "name": role.name
-    }
-    return role_dict
-
-    role = get_role(db, role_id)
-    if role is None:
-        raise HTTPException(status_code=404, detail="Role not found")
-    
-    role_data = {
-        "success": True,
-        "code": 200,
-        "message": "Role retrieved successfully",
-        "role": role
-    }
-    
-    response_data = RoleDetail(**role_data)
-    return ORJSONResponse(content=response_data.dict(), status_code=200)
+    return JSONResponse(
+        content={
+            "status": True,
+            "code": 200,
+            "message": "Role retrieved successfully!",
+            "data": {
+                "id": role.id,
+                "slug": role.slug,
+                "name": role.name
+            }
+        },
+        status_code=200
+    )
 
 
 # @router.get("/role/{role_id}", response_model=RoleDetail)
