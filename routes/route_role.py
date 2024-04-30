@@ -46,6 +46,7 @@ def get_roles(db: Session) -> List[dict]:
         roles_list.append(role_dict)
     return roles_list
 
+
 '''
 Get role List by id
 '''
@@ -76,41 +77,6 @@ def get_role_by_id(role_id: int, db: Session = Depends(get_db)):
         },
         status_code=200
     )
-
-
-# @router.get("/role/{role_id}", response_model=RoleDetail)
-# def get_role_by_id(role_id: int, db: Session = Depends(get_db)):
-#     role = get_role(db, role_id)
-#     if role is None:
-#         raise HTTPException(status_code=404, detail="Role not found")
-    
-#     role_data = {
-#         "success": True,
-#         "code": 200,
-#         "message": "Role retrieved successfully",
-#         "role": role
-#     }
-    
-#     response_data = RoleDetail(**role_data)
-#     return ORJSONResponse(content=response_data.dict(), status_code=200)
-
-# def get_role(db: Session, role_id: int) -> Optional[dict]:
-#     role = db.query(Role).filter(Role.id == role_id).first()
-#     if role is None:
-#         return None
-    
-#     role_dict = {
-#         "id": role.id,
-#         "slug": role.slug,
-#         "name": role.name
-#     }
-#     return role_dict
-
-# @router.get("/role-list/{id}", response_model=List[RoleList])
-# def get_roles_list_by_id(id: id, db: Session = Depends(get_db)):
-#     return "hello"
-
-
 
 '''
 Create role
@@ -228,7 +194,14 @@ role id does not exist
 def delete_role_handler(role_id: int, db: Session = Depends(get_db)):
     deleted_role = delete_role(db, role_id)
     if not deleted_role:
-        raise HTTPException(status_code=404, detail="Role not found")
+        return JSONResponse(
+                content={
+                    "status": False,
+                    "code": 404,
+                    "message": "Role id does not exist!",
+                },
+                status_code=404
+            )
     return deleted_role
 
 def delete_role(db: Session, role_id: int) -> RoleDelete:
@@ -237,23 +210,18 @@ def delete_role(db: Session, role_id: int) -> RoleDelete:
         deleted_role = RoleDelete(**db_role.__dict__)
         db.delete(db_role)
         db.commit()
-        return deleted_role
+        return JSONResponse(
+            content={
+                "status": True,
+                "code": 200,
+                "message": "Role has been Delete successfully!",
+            },
+            status_code=200
+        )
+        # return deleted_role
     return None
 
 # ================================================================================ router
-# from fastapi import APIRouter, Depends, HTTPException
-# from sqlalchemy.orm import Session
-# from database.schemas.role import RoleCreate
-# from database.config import get_db
-# from fastapi.responses import JSONResponse
-
-# from database.schemas.role import RoleUpdate
-# from database.schemas.role import RoleDelete
-
-# from typing import List
-
-
-
 
 
 # @router.put("/role/{role_id}/update", response_model=RoleUpdate)
@@ -286,7 +254,6 @@ def delete_role(db: Session, role_id: int) -> RoleDelete:
 #     if db_role is None:
 #         raise HTTPException(status_code=404, detail="Role not found")
 #     return db_role
-
 
 
 
@@ -324,38 +291,21 @@ def delete_role(db: Session, role_id: int) -> RoleDelete:
 
 
 
-# @router.delete("/role/{role_id}/delete", response_model=RoleDelete)
-# def delete_role_handler(role_id: int, db: Session = Depends(get_db)):
-#     deleted_role = delete_role(db, role_id)
-#     if not deleted_role:
-#         raise HTTPException(status_code=404, detail="Role not found")
-#     return deleted_role
-
-
-# ====================================================================== function
-# from sqlalchemy.orm import Session
-# from database.models.roles import Role
-
-# from database.schemas.role import RoleCreate
-# from database.schemas.role import RoleList
-# from database.schemas.role import RoleUpdate
-# from database.schemas.role import RoleDelete
-
-# from sqlalchemy.exc import IntegrityError
-# from typing import List
-
-
-
-
-
-
-
-
 #### =================================================================================================
 ##   json return
 
 # 1st 
 
+# return JSONResponse(
+#     content={
+#         "status": True,
+#         "code": 200,
+#         "message": "Role has been Delete successfully!",
+#     },
+#     status_code=200
+# )
+
+# 2nd
 # return {
 #             "status": True,
 #             "code": 200,

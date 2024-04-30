@@ -15,8 +15,7 @@ from database.models.role import Role
 # from app.models import Base
 from database.seeders.seed_roles import seed_roles
 from typing import Generator
-
-from sqlalchemy.exc import SQLAlchemyError
+from core.config import project_config
 
 
 
@@ -41,7 +40,7 @@ def include_router(app):
 
 # app = FastAPI()
 def start_application():
-    app = FastAPI(title=os.getenv("PROJECT_NAME"),version=os.getenv("PROJECT_VERSION"))
+    app = FastAPI(title=project_config.PROJECT_NAME,version=project_config.PROJECT_VERSION)
     # app = FastAPI(docs_url='/api/documentation', title=os.getenv("PROJECT_NAME"),version=os.getenv("PROJECT_VERSION"))
     create_tables()
     include_router(app)
@@ -49,17 +48,13 @@ def start_application():
 
 app = start_application()
 
+
+
 # Add Role seeder
 @app.on_event("startup")
 def add_seed_roles():
-    try:
-        db = SessionLocal()
-        seed_roles(db)
-    except SQLAlchemyError as e:
-        print(f"Error occurred during database seeding: {e}")
-        # Optionally, handle the error gracefully, log it, or raise a custom exception.
-    finally:
-        db.close()
+    db = SessionLocal()
+    seed_roles(db)
 # End Role seeder
 
 

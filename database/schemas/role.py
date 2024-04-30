@@ -16,7 +16,7 @@
 #     owner_id: int
 
 #     class Config:
-#         orm_mode = True
+#         from_attributes = True
 
 
 # class UserBase(BaseModel):
@@ -41,8 +41,8 @@ from pydantic import BaseModel, Field
 from typing import List, Any
 
 class RoleCreate(BaseModel):
-    slug: str = Field(..., min_length=1, max_length=3, description="The slug of the role")
-    name: str = Field(..., min_length=1, max_length=3, description="The name of the role")
+    slug: str = Field(..., min_length=1, max_length=6, description="The slug of the role")
+    name: str = Field(..., min_length=1, max_length=6, description="The name of the role")
 
     # class Config:
     #     alias_generator = lambda field_name: field_name
@@ -62,7 +62,6 @@ class RoleList(BaseModel):
     
 
     class Config:
-        # orm_mode = True
         from_attributes = True
 
 class RoleDetail(BaseModel):
@@ -71,15 +70,14 @@ class RoleDetail(BaseModel):
     name: str
 
     class Config:
+        # orm_mode = True
         from_attributes = True
-
 
 class RoleUpdate(BaseModel):
     slug: str
     name: str = Field(..., min_length=1, max_length=255, description="The name of the role")
 
     class Config:
-        # orm_mode = True
         from_attributes = True
 
 
@@ -89,5 +87,4 @@ class RoleDelete(BaseModel):
     name: str
 
     class Config:
-        # orm_mode = True
         from_attributes = True

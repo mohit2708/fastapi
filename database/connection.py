@@ -17,8 +17,8 @@ MY_SQL_PASSWORD = os.getenv("MY_SQL_PASSWORD")
 MY_SQL_PORT     = os.getenv("MY_SQL_PORT")
 MY_SQL_DATABASE = os.getenv("MY_SQL_DATABASE")
 
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:@localhost/profile_fastapi"
-# SQLALCHEMY_DATABASE_URL = "mysql+pymysql://{MY_SQL_USER}:@{MY_SQL_SERVER}/{MY_SQL_DATABASE}"
+# SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:@localhost/profile_fastapi"
+SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{MY_SQL_USER}:@{MY_SQL_SERVER}/{MY_SQL_DATABASE}"
 
 print(SQLALCHEMY_DATABASE_URL)
 
