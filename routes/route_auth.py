@@ -1,24 +1,28 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, FastAPI
 from fastapi.responses import JSONResponse, ORJSONResponse
 from sqlalchemy.orm import Session
-from database.models.user import User
-from database.models.role import Role
-from database.schemas.user import UserCreate, UserLogin
 from sqlalchemy.exc import IntegrityError
-
-from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing_extensions import Annotated
-from database.connection import get_db
 import bcrypt # for hashed password
 from passlib.context import CryptContext
-from database.schemas.token import Token, TokenData, TokenCredentialIn,TokenOut
 from datetime import datetime, timedelta, timezone
 from core.config import jwt_config
 
+# databse
+from database.models.user import User
+from database.models.role import Role
+from database.schemas.user import UserCreate, UserLogin
+from database.connection import get_db
+from database.schemas.token import Token, TokenData, TokenCredentialIn,TokenOut
+
+# Jwt package
+from jose import jwt
+
+
 
 router = APIRouter()
-password_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
 
 '''
 Create user
@@ -77,35 +81,73 @@ def registration_user(request: UserCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/login/")
-async def login(request: UserLogin, db: Session = Depends(get_db)):
-    user = User.get_user_by_email(db, request)
+async def login_for_access_token(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+# async def login(request: UserLogin, db: Session = Depends(get_db)):
+    user = User.get_user_by_username(db, request)
     if not user:
-        raise HTTPException(status_code=404, detail="Email not found")
+        raise HTTPException(status_code=404, detail="User name does not exist!!")
     if not User.verify_password(request.password, user.password):
         raise HTTPException(status_code=401, detail="Incorrect password")
     # Here you can generate and return a JWT token for authentication if needed
-    return {"message": "Login successful"}
+    access_token_expires = timedelta(minutes=int(jwt_config.ACCESS_TOKEN_EXPIRE_MINUTES))
 
+    access_token = create_access_token(
+        data={"sub": user.user_name}, expires_delta=access_token_expires
+    )
 
-
-
-
-# @router.post("/login", response_model=TokenOut, response_class=JSONResponse, name="login")
-# async def login_user(request: TokenCredentialIn, db:Session = Depends(get_db)):
-#     user = db.query(User).filter(User.email == request.email).first()
-#     # if not user: OR
-#     if user is None:
-#         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Incorrect email")
+    return JSONResponse(
+        content={
+            "status": True,
+            "code": 200,
+            "message": "User login successfully!",
+            "data": {
+                "id": user.id,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+                "access_token": access_token,
+                "token_type": "bearer",
+                # "name": user.name,
+                "created_at": user.created_at.strftime("%Y-%m-%d %H:%M:%S"),
+                "updated_at": user.updated_at.strftime("%Y-%m-%d %H:%M:%S")
+            }
+        },
+        status_code=200
+    )
     
-#     hashed_pass = user.password
-#     if not verify_password(request.password, hashed_pass):
-#         raise HTTPException(
-#             status_code=status.HTTP_400_BAD_REQUEST,
-#             detail="Incorrect password"
-#         )
-#     print(jwt_config.ACCESS_TOKEN_EXPIRE_MINUTES)
-#     access_token_expires = timedelta(minutes=int(jwt_config.ACCESS_TOKEN_EXPIRE_MINUTES))
-#     return access_token_expires
+    # return {"access_token": access_token, "token_type": "bearer"}
+    
+    # return {"message": "Login successful"}
+
+
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.now(timezone.utc) + expires_delta
+    else:
+        expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, jwt_config.SECRET_KEY, algorithm=jwt_config.ALGORITHM)
+    return encoded_jwt
+
+
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+def verify_token(token: str = Depends(oauth2_scheme)):
+    try:
+        payload = jwt.decode(token, jwt_config.SECRET_KEY, algorithms=[jwt_config.ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise HTTPException(status_code=401, detail="Invalid token")
+        return username
+    except jwt.JWTError:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+
+@router.get("/users/")
+async def get_users(username: str = Depends(verify_token), db: Session = Depends(get_db)):
+    users = db.query(User).all()
+    return users
 
 
     #     access_token_expires = timedelta(minutes=int(settings.ACCESS_TOKEN_EXPIRE_MINUTES))
