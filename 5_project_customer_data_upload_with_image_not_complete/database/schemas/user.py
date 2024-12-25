@@ -1,5 +1,6 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
+from fastapi import Form
 
 class UserCreate(BaseModel):
     role_id: int = Field(..., description="The role id of the user")
@@ -16,3 +17,15 @@ class UserCreate(BaseModel):
 class UserLogin(BaseModel):
     email: EmailStr = Field(..., description="The email address of the user")
     password: str = Field(..., min_length=1, description="The password of the user")
+
+class CustomerStore(BaseModel):
+    first_name: str
+    last_name: str
+
+    @classmethod
+    def as_form(
+        cls,
+        first_name: str = Form(...),
+        last_name: str = Form(...)
+    ) -> "CustomerStore":
+        return cls(first_name=first_name, last_name=last_name)

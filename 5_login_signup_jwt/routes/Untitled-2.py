@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, Depends, HTTPException
+from typing import Annotated
 from sqlalchemy.orm import Session
 from database.connection import get_db
 from database.models.users import User
@@ -11,6 +12,21 @@ from sqlalchemy.exc import SQLAlchemyError
 from database.schemas.user import UserCreate, UserLogin
 
 import bcrypt # for hashed password 
+
+import jwt
+from passlib.context import CryptContext
+from passlib.hash import bcrypt
+
+from datetime import datetime, timedelta
+
+from fastapi.security import OAuth2PasswordBearer
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+
+# Define a SECRET_KEY and JWT expiration time
+SECRET_KEY = "your_secret_key_here"  # Make sure to store this securely
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30  # Token expiry time
 
 router = APIRouter()
 
@@ -101,13 +117,21 @@ def registration_user(request: UserCreate, db: Session = Depends(get_db)):
     )
 
 
-'''
-login user
-email or password is valid or not
-password hash check
-'''
+# Function to create an access token
+def create_access_token(data: dict, expires_delta: timedelta = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        expire = datetime.utcnow() + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+# Update the login endpoint to return a JWT token upon successful login
 @router.post("/login")
 def login_user(request: UserLogin, db: Session = Depends(get_db)):
+    print(request)
 
     # Check if the user exists with the provided email
     db_user = db.query(User).filter(User.email == request.email).first()
@@ -122,7 +146,7 @@ def login_user(request: UserLogin, db: Session = Depends(get_db)):
         )
     
     # Verify the provided password with the stored hashed password
-    if not bcrypt.checkpw(request.password.encode('utf-8'), db_user.password.encode('utf-8')):
+    if not bcrypt.verify(request.password, db_user.password):
         return JSONResponse(
             content={
                 "status": False,
@@ -132,15 +156,23 @@ def login_user(request: UserLogin, db: Session = Depends(get_db)):
             status_code=401
         )
 
+    # Generate the JWT token
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": db_user.email}, expires_delta=access_token_expires
+    )
+
     # Retrieve the UserDetails associated with this user
     db_user_details = db.query(UserDetails).filter(UserDetails.user_id == db_user.id).first()
 
-    # If login is successful
+    # If login is successful, return the JWT token along with user details
     return JSONResponse(
         content={
             "status": True,
             "code": 200,
             "message": "Login successful",
+            "access_token": access_token,
+            "token_type": "bearer",
             "data": {
                 "id": db_user.id,
                 "first_name": db_user.first_name,
@@ -159,3 +191,37 @@ def login_user(request: UserLogin, db: Session = Depends(get_db)):
         },
         status_code=200
     )
+
+# Function to decode and validate the JWT token
+def decode_access_token(token: str):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return payload.get("sub")
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token has expired",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    except jwt.JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+def get_current_user(token: str = Depends(oauth2_scheme)):
+    email = decode_access_token(token)
+    if email is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+        )
+    return email
+
+@router.get("/protected-route")
+def protected_route(current_user: str = Depends(get_current_user)):
+    return {"message": f"Hello, {current_user}"}
+
+
+ValueError: not a valid bcrypt hash
