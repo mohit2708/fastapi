@@ -1,0 +1,524 @@
+2025-01-16 14:45:14,343 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 14:45:14,343 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 14:45:14,343 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 14:45:14,343 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 14:49:40,914 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 14:49:40,914 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 14:49:40,924 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 14:49:40,924 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 14:50:00,002 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 14:52:00,529 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 14:52:00,529 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 14:52:00,529 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 14:52:00,529 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 14:52:01,988 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 14:52:01,988 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 14:52:01,988 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 14:52:01,988 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 14:53:01,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 14:53:01,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 14:53:01,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 14:53:01,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:09:31,320 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:09:31,320 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:09:31,320 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:09:31,320 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:09:37,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:09:37,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:09:37,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:09:37,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:17:27,821 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:17:27,821 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:17:27,821 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:17:27,821 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:18:30,586 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:18:30,586 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:18:30,586 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:18:30,586 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:21:36,353 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:21:36,353 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:21:36,353 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:21:36,353 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:31:36,952 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:31:36,952 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:31:36,952 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:31:36,952 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:31:38,485 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:31:38,486 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:31:38,486 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:31:38,486 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:32:37,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:32:37,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:32:37,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:32:37,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:32:38,760 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:32:38,760 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:32:38,760 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:32:38,760 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:33:10,561 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:33:10,561 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:33:10,561 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:33:10,561 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:35:00,521 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:35:00,521 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:35:00,521 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:35:00,521 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:35:02,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:35:02,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:35:02,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:35:02,011 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:40:02,573 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:40:02,573 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:40:02,574 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:40:02,575 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:40:04,245 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:40:04,245 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:40:04,246 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:40:04,246 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:40:18,560 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:40:18,560 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:40:18,560 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:40:18,560 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:43:03,756 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:43:03,757 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:43:03,757 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:43:03,757 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:46:32,496 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:46:32,496 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:46:32,496 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:46:32,496 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:48:37,182 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:48:37,183 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:48:37,183 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:48:37,183 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:49:08,906 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:49:08,906 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:49:08,906 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:49:08,906 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:49:21,280 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:49:21,280 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:49:21,280 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:49:21,280 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:50:43,342 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:50:43,342 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:50:43,342 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:50:43,342 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:50:44,831 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:50:44,838 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:50:44,838 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:50:44,838 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:51:16,595 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:51:16,595 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:51:16,595 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:51:16,595 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:51:17,257 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 15:59:14,235 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 15:59:14,235 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 15:59:14,235 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 15:59:14,235 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 15:59:33,815 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:04:15,562 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:04:15,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:04:15,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:04:15,564 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:04:17,022 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:04:17,022 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:04:17,022 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:04:17,022 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:07:37,251 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:07:37,251 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:07:37,251 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:07:37,251 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:07:37,284 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:07:37,284 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:07:37,284 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:07:37,284 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:08:47,652 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:08:47,652 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:08:47,652 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:08:47,652 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:08:47,675 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:08:47,675 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:08:47,675 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:08:47,675 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:17:04,777 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:17:04,778 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:17:04,778 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:17:04,779 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:17:04,803 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:17:04,803 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:17:04,803 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:17:04,803 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:17:24,424 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:18:44,614 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:18:44,614 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:18:44,614 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:18:44,614 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:18:44,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:18:44,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:18:44,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:18:44,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:18:46,029 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:18:46,029 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:18:46,029 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:18:46,029 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:18:46,042 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:18:46,042 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:18:46,042 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:18:46,042 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:18:52,305 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:20:07,920 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:20:07,920 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:20:07,920 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:20:07,920 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:20:07,959 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:20:07,959 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:20:07,959 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:20:07,959 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:20:08,089 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:20:56,340 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:20:56,340 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:20:56,340 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:20:56,340 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:20:56,372 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:20:56,372 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:20:56,372 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:20:56,372 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:20:56,439 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:21:11,888 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:21:11,888 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:21:11,888 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:21:11,888 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:21:11,908 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:21:11,908 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:21:11,908 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:21:11,908 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:21:11,970 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:21:28,472 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:21:28,472 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:21:28,472 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:21:28,472 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:21:28,511 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:21:28,511 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:21:28,511 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:21:28,511 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:21:28,589 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:22:00,123 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:22:00,123 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:22:00,123 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:22:00,123 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:22:00,146 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:22:00,146 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:22:00,146 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:22:00,146 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:22:45,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:22:45,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:22:45,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:22:45,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:22:45,852 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:22:45,852 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:22:45,852 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:22:45,852 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:15,410 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:15,410 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:15,410 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:15,410 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:15,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:15,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:15,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:15,442 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:16,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:16,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:16,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:16,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:16,862 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:16,862 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:16,862 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:16,862 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:48,491 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:48,491 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:48,491 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:48,491 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:48,528 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:48,528 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:48,528 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:48,528 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:50,036 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:50,036 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:50,036 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:50,036 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:24:50,051 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:24:50,051 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:24:50,051 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:24:50,051 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:25:03,312 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:25:03,312 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:25:03,312 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:25:03,312 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:25:09,362 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:25:09,362 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:25:09,362 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:25:09,362 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:25:09,370 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:25:09,386 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:25:09,386 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:25:09,386 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:25:16,826 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:25:16,826 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:25:16,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:25:16,827 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:25:16,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:25:16,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:25:16,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:25:16,866 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:52:55,233 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 16:53:17,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:53:17,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:53:17,865 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:53:17,881 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 16:53:17,900 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 16:53:17,900 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 16:53:17,900 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 16:53:17,900 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:00:37,152 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:00:37,152 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:00:37,152 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:00:37,152 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:00:37,186 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:00:37,186 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:00:37,186 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:00:37,186 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:04,746 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:04,746 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:04,746 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:04,758 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:04,777 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:04,777 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:04,777 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:04,777 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:24,781 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:24,781 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:24,781 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:24,781 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:24,805 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:24,805 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:24,805 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:24,805 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:38,541 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:38,541 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:38,541 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:38,541 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:01:38,557 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:01:38,557 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:01:38,557 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:01:38,557 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:22:01,969 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:22:01,969 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:22:01,969 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:22:01,969 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:22:56,358 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:22:56,358 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:22:56,358 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:22:56,358 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:38:40,222 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:38:40,223 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:38:40,225 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:38:40,234 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:38:40,246 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:38:40,246 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:38:40,261 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:38:40,261 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:54:19,355 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:54:19,355 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:54:19,355 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:54:19,355 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:54:41,066 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:54:41,066 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:54:41,066 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:54:41,066 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:54:41,099 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:54:41,099 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:54:41,099 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:54:41,099 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:54:42,622 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:54:42,622 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:54:42,622 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:54:42,622 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:54:42,645 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:54:42,645 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:54:42,645 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:54:42,645 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:55:27,468 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:55:27,484 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:55:27,484 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:55:27,484 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:55:27,500 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:55:27,500 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:55:27,500 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:55:27,500 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:56:47,327 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:56:47,327 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:56:47,327 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:56:47,327 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 21:56:47,359 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 21:56:47,359 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 21:56:47,359 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 21:56:47,359 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:48,727 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:48,727 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:48,727 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:48,728 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:48,752 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:48,753 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:48,753 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:48,753 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:50,536 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:50,536 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:50,536 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:50,536 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:50,570 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:50,570 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:50,570 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:50,570 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:59,830 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:59,830 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:59,830 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:59,830 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:06:59,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:06:59,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:06:59,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:06:59,846 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:10:42,267 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:10:42,267 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:10:42,267 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:10:42,267 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:10:42,299 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:10:42,299 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:10:42,299 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:10:42,299 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:11:03,314 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:11:03,314 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:11:03,314 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:11:03,314 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:11:03,345 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:11:03,345 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:11:03,345 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:11:03,345 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:11:49,670 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 22:15:41,112 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:15:41,113 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:15:41,113 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:15:41,114 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:15:41,141 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:15:41,141 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:15:41,141 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:15:41,142 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:15:42,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:15:42,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:15:42,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:15:42,563 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:15:42,594 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:15:42,594 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:15:42,594 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:15:42,594 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:17:18,794 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:17:18,794 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:17:18,794 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:17:18,794 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:17:18,810 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:17:18,810 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:17:18,810 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:17:18,810 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:17:20,291 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:17:20,291 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:17:20,291 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:17:20,291 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:17:20,323 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:17:20,323 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:17:20,323 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:17:20,323 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:38:03,892 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:38:03,892 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:38:03,892 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:38:03,892 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:38:03,926 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:38:03,926 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:38:03,926 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:38:03,926 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:38:27,144 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 22:41:10,951 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:41:10,951 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:41:10,951 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:41:10,951 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:41:10,982 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:41:10,982 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:41:10,982 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:41:10,982 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:41:12,575 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:41:12,575 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:41:12,576 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:41:12,576 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-16 22:41:12,599 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-16 22:41:12,599 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-16 22:41:12,599 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-16 22:41:12,600 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
