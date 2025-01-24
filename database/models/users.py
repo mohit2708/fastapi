@@ -50,6 +50,9 @@ class User(Base):
         return db.query(User).filter(User.email == requestemail).first()
     
 
+    def get_user_by_username(db: Session, requestusername):
+        return db.query(User).filter(User.user_name == requestusername).first()
+
     """
     check user exist or not
     """

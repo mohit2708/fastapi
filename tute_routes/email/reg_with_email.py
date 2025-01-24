@@ -7,6 +7,8 @@ from database.connection import get_db
 from database.models.users import User
 from database.models.roles import Role
 from sqlalchemy.orm import Session
+from typing import List
+
 
 import bcrypt # for hashed password 
 
@@ -18,6 +20,8 @@ from typing import List
 
 class EmailSchema(BaseModel):
     email: List[EmailStr]
+    # email: str
+    
 
 
 conf = ConnectionConfig(
@@ -37,48 +41,8 @@ conf = ConnectionConfig(
 
 
 router = APIRouter()
+app = FastAPI()
 
-# class Envs:
-#     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
-#     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-#     MAIL_FROM = os.getenv('MAIL_FROM')
-#     MAIL_PORT = int(os.getenv('MAIL_PORT'))
-#     MAIL_SERVER = os.getenv('MAIL_SERVER')
-#     MAIL_FROM_NAME = os.getenv('MAIN_FROM_NAME')
-
-
-
-@router.post("/email")
-async def simple_send(email: EmailSchema) -> JSONResponse:
-    html = """<p>Hi this test mail, thanks for using Fastapi-mail</p> """
-
-    message = MessageSchema(
-        subject="Fastapi-Mail module",
-        recipients=email.dict().get("email"),
-        body=html,
-        subtype=MessageType.html)
-
-    fm = FastMail(conf)
-    await fm.send_message(message)
-    return JSONResponse(status_code=200, content={"message": "email has been sent"})
-
-@router.post("/emailbackground")
-async def send_in_background(
-    background_tasks: BackgroundTasks,
-    email: EmailSchema
-    ) -> JSONResponse:
-
-    message = MessageSchema(
-        subject="Fastapi mail module",
-        recipients=email.dict().get("email"),
-        body="Simple background task",
-        subtype=MessageType.plain)
-
-    fm = FastMail(conf)
-
-    background_tasks.add_task(fm.send_message,message)
-
-    return JSONResponse(status_code=200, content={"message": "email has been sent"})
 
 '''
 Create user
@@ -87,7 +51,7 @@ username or email already exist
 password hash
 email send
 '''
-@router.post("/registration_user_with_send_email")
+@app.post("/registration_user_with_send_email")
 async def registration_user_with_send_email(request: UserCreate, db: Session = Depends(get_db)):
 
     # Check if the provided role_id exists
@@ -186,4 +150,5 @@ async def registration_user_with_send_email(request: UserCreate, db: Session = D
         },
         status_code=200
     )
+
 

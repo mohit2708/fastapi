@@ -1,0 +1,44 @@
+2025-01-22 18:57:44,967 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 18:57:44,983 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 18:57:44,983 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 18:57:44,983 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 18:57:44,998 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 18:57:45,014 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 18:57:45,014 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 18:57:45,014 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 21:43:07,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 21:43:07,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 21:43:07,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 21:43:07,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 21:43:07,661 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 21:43:07,661 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 21:43:07,661 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 21:43:07,661 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 21:47:32,074 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 21:47:32,074 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 21:47:32,074 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 21:47:32,074 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 21:47:32,093 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 21:47:32,093 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 21:47:32,093 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 21:47:32,093 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 21:48:08,877 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 22:52:18,238 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 22:52:18,238 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 22:52:18,238 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 22:52:18,238 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-22 22:52:18,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 13
+2025-01-22 22:52:18,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 14
+2025-01-22 22:52:18,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 15
+2025-01-22 22:52:18,285 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 17
+2025-01-23 15:48:38,050 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\mohit\tute_fastapi\envcreate\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'

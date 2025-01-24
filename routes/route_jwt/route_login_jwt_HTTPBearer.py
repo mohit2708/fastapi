@@ -20,8 +20,9 @@ router = APIRouter()
 http_bearer_scheme = HTTPBearer()
 
 @router.post("/login")
-async def login(request: UserLogin, db: Session = Depends(get_db)):
-    get_user_data = User.get_user_by_email(db, request.email)  # Changed to get_user_by_email
+async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+# async def login(request: UserLogin, db: Session = Depends(get_db)):
+    get_user_data = User.get_user_by_email(db, form_data.username)  # Changed to get_user_by_email
     if not get_user_data:
         return JSONResponse(
             content={
@@ -31,7 +32,7 @@ async def login(request: UserLogin, db: Session = Depends(get_db)):
             },
             status_code=404
         )
-    if not User.verify_password(request.password, get_user_data.password):
+    if not User.verify_password(form_data.password, get_user_data.password):
         return JSONResponse(
             content={
                 "status": False,
@@ -83,7 +84,6 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
 def verify_token(token: str = Depends(http_bearer_scheme)):
     try:
         payload = jwt.decode(token.credentials, jwt_config.SECRET_KEY, algorithms=[jwt_config.ALGORITHM])
-        print(payload)
         email: str = payload.get("email")  # Changed to email
         if email is None:
             raise HTTPException(status_code=401, detail="Invalid token")
@@ -91,7 +91,6 @@ def verify_token(token: str = Depends(http_bearer_scheme)):
         return email
     except InvalidTokenError:
         raise HTTPException(status_code=401, detail="Invalid token")
-        
 
 @router.get("/users/")
 async def get_users(email: str = Depends(verify_token), db: Session = Depends(get_db)):  # Changed to email
