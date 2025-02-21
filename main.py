@@ -1,69 +1,97 @@
-from database.connection import engine, Base, SessionLocal
-from database.seeders.roles import seed_roles
-from database.connection import engine, Base
-from jwt.exceptions import InvalidTokenError
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI, APIRouter, Depends, HTTPException, BackgroundTasks
+from database.schemas.user import UserCreate
+from database.models.user_details import UserDetails
+from fastapi.responses import JSONResponse  # Include for message response.
+from sqlalchemy.exc import SQLAlchemyError
+from database.connection import get_db
+from database.models.users import User
 from database.models.roles import Role
-from routes.base import api_router
-from dotenv import load_dotenv
-from fastapi import FastAPI,Request, HTTPException
-from typing import Union
-import jwt
-from core.config import jwt_config
+from sqlalchemy.orm import Session
+from typing import List
+from fastapi import File, UploadFile
+
+import bcrypt # for hashed password 
 
 
+from starlette.responses import JSONResponse
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig, MessageType
+from pydantic import EmailStr, BaseModel
+from typing import List
+
+from fastapi import Form
 import os
 
+# class EmailSchema:
+#     def __init__(self, email: List[EmailStr], body: str):
+#         self.email = email
+#         self.body = body
+    
+class EmailSchema(BaseModel):
+    email: List[EmailStr]
 
-# Load .env file
-load_dotenv()
+conf = ConnectionConfig(
+    MAIL_USERNAME ="janicahanover@gmail.com",
+    MAIL_PASSWORD = "dwglkfflvxoxzywr",
+    MAIL_FROM = "janicahanover@gmail.com",
+    MAIL_PORT = 465,
+    MAIL_SERVER = "smtp.gmail.com",
+    MAIL_STARTTLS = False,
+    MAIL_SSL_TLS = True,
+    USE_CREDENTIALS = True,
+    VALIDATE_CERTS = True
+)
 
-# add code for routes
-def include_router(app):
-	app.include_router(api_router)
+# from dotenv import load_dotenv
+# load_dotenv('.env')
 
-def create_tables():
-	Base.metadata.create_all(bind=engine)
 
-def start_application():
-    # app = FastAPI(title=project_config.PROJECT_NAME,version=project_config.PROJECT_VERSION)
-    app = FastAPI(title=os.getenv("PROJECT_NAME"),version=os.getenv("PROJECT_VERSION"))
-    create_tables()
-    include_router(app)
-    return app
+# router = APIRouter()
+app = FastAPI()
 
-app = start_application()
+# @app.post("/send-email-with-attachment/")
+# async def send_email_with_attachment(
+#     background_tasks: BackgroundTasks,
+#     file: UploadFile = File(...),
+#     email: str = Form(...),
+#     body: str = Form(...),
+# ):
+#     message = MessageSchema(
+#         subject="Email with Attachment",
+#         recipients=[email],
+#         body=body,
+#         subtype=MessageType.html,
+#         attachments=[file.file],
+#     )
 
-@app.on_event("startup")
-def add_seed_roles():
-    db = SessionLocal()
-    seed_roles(db)
-    db.close()
+#     background_tasks.add_task(fm.send_message, message)
+#     return {"message": "Email has been sent"}
 
-# Define the middleware function
-async def role_check_middleware(request: Request, call_next):
-    # Exclude the login route from the role check
-    if request.url.path == "/login":
-        response = await call_next(request)
-        return response
 
-    token = request.headers.get("Authorization")
-    if token is None or not token.startswith("Bearer "):
-        return JSONResponse(status_code=401, content={"message": "Unauthorized"})
 
+@app.post("/file")
+async def send_file(
+    background_tasks: BackgroundTasks,
+    file: UploadFile = File(...),
+    email: EmailStr = Form(...)
+) -> JSONResponse:
     try:
-        payload = jwt.decode(token[7:], jwt_config.SECRET_KEY, algorithms=[jwt_config.ALGORITHM])
-        print(payload)
-        email: str = payload.get("email")
-        role_id: int = payload.get("role_id")
-        if email is None or role_id is None:
-            raise HTTPException(status_code=401, detail="Invalid token")
-        if role_id != 1:
-            return JSONResponse(status_code=403, content={"message": "You are not authorized to access this resource"})
-    except InvalidTokenError:
-        raise HTTPException(status_code=401, detail="Invalid token")
+        # Read the file content
+        file_content = await file.read()
+        
+        # Create the message
+        message = MessageSchema(
+            subject="FastAPI mail module",
+            recipients=[email],
+            body="Simple background task",
+            subtype=MessageType.html,
+            attachments=[{"filename": file.filename, "content": file_content}]
+        )
 
-    response = await call_next(request)
-    return response
+        fm = FastMail(conf)
 
-# app.middleware("http")(role_check_middleware)
+        # Add the task to the background tasks
+        background_tasks.add_task(fm.send_message, message)
+
+        return JSONResponse(status_code=200, content={"message": "email has been sent"})
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"message": f"An error occurred: {str(e)}"})

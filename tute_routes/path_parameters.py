@@ -6,20 +6,19 @@ from enum import Enum
 app = FastAPI()
 
 
-@app.get("/", tags=["Path parameters"])
-def first_page_function():
-    return {"msg":"Hello FastAPI🚀"}
-
 @app.get("/path_parameters/{item_id}" , tags=["Path parameters"])
 async def path_parameters(item_id):
     return {"item_id": item_id}
 
-@app.get("/path_parameters_with_types/{item_id}", tags=["Path parameters with types"])
-async def path_parameters_with_types(item_id: int):
+
+
+@app.get("/path_parameters_with_int_validation/{item_id}" , tags=["Path parameters with validation"])
+async def path_parameters_with_int_validation(item_id:int):
     return {"item_id": item_id}
 
-@app.get("/users/{user_id}", tags=["Path parameters with types"])
-async def read_user(user_id: str):
+
+@app.get("/path_parameters_with_str_validation/{user_id}", tags=["Path parameters with validation"])
+async def path_parameters_with_str_validation(user_id: str):
     return {"user_id": user_id}
 
 class ModelName(str, Enum):
@@ -27,7 +26,7 @@ class ModelName(str, Enum):
     resnet = "resnet"
     lenet = "lenet"
 
-@app.get("/models/{model_name}" , tags=["Path parameters with Predefined values"])
+@app.get("/models/{model_name}" , tags=["Path parameters with Predefined values (Enum)"])
 async def get_model(model_name: ModelName):
     if model_name is ModelName.alexnet:
         return {"model_name": model_name, "message": "Deep Learning FTW!"}
@@ -38,8 +37,7 @@ async def get_model(model_name: ModelName):
     return {"model_name": model_name, "message": "Have some residuals"}
 
 
-
-@app.get("/items/{item_id}", tags=["Path parameters with Predefined values"])
+@app.get("/items/{item_id}", tags=["Path parameters with Predefined values (Enum)"])
 async def read_items(item_id: Annotated[int, Path(title="The ID of the item to get")],q: Annotated[str | None, Query(alias="item-query")] = None):
     results = {"item_id": item_id}
     if q:
@@ -53,7 +51,7 @@ async def read_items1(
     results = {"item_id": item_id}
     if q:
         results.update({"q": q})
-    return results
+    return results  
 
 
 @app.get("/items2/{item_id}")

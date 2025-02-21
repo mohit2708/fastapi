@@ -7,20 +7,6 @@ app = FastAPI()
 def first_page_function():
     return {"msg":"Hello FastAPI🚀"}
 
-@app.post("/")
-def first_page_function():
-    return {"msg":"Hello FastAPI🚀"}
-
-
-@app.put("/")
-def first_page_function():
-    return {"msg":"Hello FastAPI🚀"}
-
-
-@app.delete("/")
-def first_page_function():
-    return {"msg":"Hello FastAPI🚀"}
-
 @app.get("/first_page")
 def first_page_function():
     return "Hello my first page url"
